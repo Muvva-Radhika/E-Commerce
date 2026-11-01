@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEase - Shopping Cart</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Navigation */
+
+        nav {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 30px;
+            box-shadow: 0 2px 8px gray;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff6600;
+        }
+
+        nav ol {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav ol li a {
+            text-decoration: none;
+            color: black;
+            font-size: 17px;
+        }
+
+        nav ol li a:hover {
+            color: orange;
+        }
+
+        .cart-container {
+            width: 90%;
+            margin: 40px auto;
+        }
+
+        .cart-container h1 {
+            margin-bottom: 25px;
+        }
+
+        .cart-content {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .cart-items {
+            background-color: white;
+            width: 70%;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart-item img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+        }
+
+        .product-details {
+            flex: 1;
+        }
+
+        .product-details h2 {
+            margin-bottom: 10px;
+        }
+
+        .product-details p {
+            color: gray;
+            margin-bottom: 10px;
+        }
+
+        .quantity {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .quantity button {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ccc;
+            background-color: white;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .quantity span {
+            font-size: 16px;
+        }
+
+        .remove {
+            background-color: #ff4444;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .remove:hover {
+            background-color: #cc0000;
+        }
+
+        .cart-summary {
+            background-color: white;
+            width: 30%;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #ddd;
+        }
+
+        .cart-summary h2 {
+            margin-bottom: 20px;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+        }
+
+        .total {
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .checkout {
+            width: 100%;
+            padding: 14px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 17px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .checkout:hover {
+            background-color: darkgreen;
+        }
+
+        /* Responsive Design */
+
+        @media (max-width: 900px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ol {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .cart-content {
+                flex-direction: column;
+            }
+
+            .cart-items,
+            .cart-summary {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .cart-container {
+                width: 95%;
+            }
+
+            .cart-item {
+                flex-wrap: wrap;
+            }
+
+            .cart-item img {
+                width: 90px;
+                height: 90px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav>
+
+        <h2 class="logo">ShopEase</h2>
+
+        <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/products.html">Products</a></li>
+            <li>
+                <a href="/cart.html">
+                    Cart (<span id="cart-count">0</span>)
+                </a>
+            </li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/login.html">Login</a></li>
+            <li><a href="/registration.html">Register</a></li>
+        </ol>
+
+    </nav>
+
+    <!-- Shopping Cart Section -->
+
+    <div class="cart-container">
+
+        <h1>🛒 Shopping Cart</h1>
+
+        <div class="cart-content">
+
+            <!-- Cart Items: Loaded Dynamically Using JavaScript -->
+
+            <div class="cart-items" id="cart-items">
+
+                Loading cart...
+
+            </div>
+
+            <!-- Order Summary -->
+
+            <div class="cart-summary">
+
+                <h2>Order Summary</h2>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">₹0.00</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Delivery</span>
+                    <span id="delivery">₹0.00</span>
+                </div>
+
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span id="total">₹0.00</span>
+                </div>
+
+                <button class="checkout" onclick="checkout()">
+                    Proceed to Checkout
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript Files -->
+
+    <script src="/js/common.js"></script>
+    <script src="/js/cart.js"></script>
+
+</body>
+
+</html>

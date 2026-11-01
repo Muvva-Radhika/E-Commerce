@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us - DK Mart</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        nav {
+            background-color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 10px 30px;
+
+            box-shadow: 0 2px 8px gray;
+        }
+
+        .logo {
+            width: 70px;
+            height: 70px;
+
+            object-fit: contain;
+        }
+
+        nav ol {
+            display: flex;
+
+            gap: 30px;
+
+            list-style: none;
+        }
+
+        nav ol li a {
+            text-decoration: none;
+
+            color: black;
+
+            font-size: 17px;
+        }
+
+        nav ol li a:hover {
+            color: orange;
+        }
+
+        .contact-banner {
+
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)),
+                url("https://thumbs.dreamstime.com/z/e-commerce-ecommerce-web-banner-orange-background-various-shopping-icons-online-shopping-concept-e-commerce-ecommerce-web-246439258.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            height: 280px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            color: white;
+        }
+
+        .contact-banner h1 {
+
+            font-size: 45px;
+
+        }
+
+        .contact-banner p {
+
+            font-size: 20px;
+
+            margin-top: 10px;
+
+        }
+
+        .contact-container {
+
+            width: 85%;
+
+            margin: 40px auto;
+
+        }
+
+        .contact-info {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+
+            margin-bottom: 40px;
+
+        }
+
+
+        .info-card {
+
+            background-color: white;
+
+            padding: 30px;
+
+            text-align: center;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 3px 10px #ddd;
+
+        }
+
+
+        .info-icon {
+
+            font-size: 40px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .info-card h2 {
+
+            color: orange;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .info-card p {
+
+            color: #666;
+
+            line-height: 1.6;
+
+        }
+
+        .contact-area {
+
+            display: flex;
+
+            gap: 30px;
+
+            align-items: flex-start;
+
+        }
+
+        .contact-form {
+
+            background-color: white;
+
+            width: 65%;
+
+            padding: 30px;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 3px 10px #ddd;
+
+        }
+
+
+        .contact-form h2 {
+
+            color: orange;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .form-group {
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .form-group label {
+
+            display: block;
+
+            margin-bottom: 7px;
+
+            font-weight: bold;
+
+        }
+
+
+        .form-group input,
+        .form-group textarea {
+
+            width: 100%;
+
+            padding: 12px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 5px;
+
+            font-size: 15px;
+
+        }
+
+
+        .form-group textarea {
+
+            height: 130px;
+
+            resize: none;
+
+        }
+
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+
+            outline: none;
+
+            border-color: orange;
+
+        }
+
+
+        .send-button {
+
+            background-color: orange;
+
+            color: white;
+
+            border: none;
+
+            padding: 12px 25px;
+
+            border-radius: 5px;
+
+            font-size: 16px;
+
+            cursor: pointer;
+
+        }
+
+
+        .send-button:hover {
+
+            background-color: darkorange;
+
+        }
+
+        .business-info {
+
+            width: 35%;
+
+            background-color: white;
+
+            padding: 30px;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 3px 10px #ddd;
+
+        }
+
+
+        .business-info h2 {
+
+            color: orange;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .business-info p {
+
+            margin: 15px 0;
+
+            line-height: 1.6;
+
+        }
+
+
+        .business-info strong {
+
+            color: #333;
+
+        }
+
+        .map-section {
+
+            background-color: white;
+
+            padding: 30px;
+
+            margin-top: 40px;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 3px 10px #ddd;
+
+        }
+
+
+        .map-section h2 {
+
+            color: orange;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .map {
+
+            width: 100%;
+
+            height: 300px;
+
+            border: none;
+
+            border-radius: 8px;
+
+        }
+
+        footer {
+
+            background-color: #222;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+
+            margin-top: 40px;
+
+        }
+
+
+        footer p {
+
+            margin: 8px;
+
+        }
+
+        @media (max-width: 800px) {
+
+            nav {
+
+                flex-direction: column;
+
+                gap: 15px;
+
+            }
+
+
+            nav ol {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+            }
+
+
+            .contact-info {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .contact-area {
+
+                flex-direction: column;
+
+            }
+
+
+            .contact-form,
+            .business-info {
+
+                width: 100%;
+
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <nav>
+
+        <img class="logo"
+            src="https://content.jdmagicbox.com/comp/vijayawada/p6/0866px866.x866.191206192017.h4p6/catalogue/dk-mart-ashok-nagar-vijayawada-supermarkets-3757xusrmy.jpg"
+            alt="DK Mart Logo">
+
+
+        <ol>
+
+            <li>
+                <a href="Home.html">Home</a>
+            </li>
+
+            <li>
+                <a href="products.html">Products</a>
+            </li>
+
+            <li>
+                <a href="cart.html">Cart</a>
+            </li>
+
+            <li>
+                <a href="About.html">About</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
+            <li>
+                <a href="login.html">Login</a>
+            </li>
+
+            <li>
+                <a href="registration.html">Register</a>
+            </li>
+
+        </ol>
+
+    </nav>
+
+    <section class="contact-banner">
+
+        <div>
+
+            <h1>Contact Us</h1>
+
+            <p>
+                We are here to help you
+            </p>
+
+        </div>
+
+    </section>
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+
+
+            <div class="info-card">
+
+                <div class="info-icon">
+
+                </div>
+
+                <h2>Address</h2>
+
+                <p>
+                    DK Mart<br>
+                    Vijayawada,<br>
+                    Andhra Pradesh, India
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="info-icon">
+
+                </div>
+
+                <h2>Phone</h2>
+
+                <p>
+                    +91 9876543210
+                </p>
+
+                <p>
+                    Monday - Saturday
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="info-icon">
+
+                </div>
+
+                <h2>Email</h2>
+
+                <p>
+                    support@dkmart.com
+                </p>
+
+                <p>
+                    We reply within 24 hours
+                </p>
+
+            </div>
+
+
+        </div>
+
+        <div class="contact-area">
+
+
+            <!-- CONTACT FORM -->
+
+            <div class="contact-form">
+
+                <h2>Send Us a Message</h2>
+
+
+                <form>
+
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Full Name
+                        </label>
+
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="subject">
+                            Subject
+                        </label>
+
+                        <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Message
+                        </label>
+
+                        <textarea id="message" name="message" placeholder="Write your message here..."
+                            required></textarea>
+
+                    </div>
+
+
+                    <button type="submit" class="send-button">
+                        Send Message
+                    </button>
+
+
+                </form>
+
+            </div>
+
+            <div class="business-info">
+
+                <h2>Business Hours</h2>
+
+
+                <p>
+                    <strong>Monday:</strong>
+                    9:00 AM - 8:00 PM
+                </p>
+
+                <p>
+                    <strong>Tuesday:</strong>
+                    9:00 AM - 8:00 PM
+                </p>
+
+                <p>
+                    <strong>Wednesday:</strong>
+                    9:00 AM - 8:00 PM
+                </p>
+
+                <p>
+                    <strong>Thursday:</strong>
+                    9:00 AM - 8:00 PM
+                </p>
+
+                <p>
+                    <strong>Friday:</strong>
+                    9:00 AM - 8:00 PM
+                </p>
+
+                <p>
+                    <strong>Saturday:</strong>
+                    9:00 AM - 8:00 PM
+                </p>
+
+                <p>
+                    <strong>Sunday:</strong>
+                    10:00 AM - 6:00 PM
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="map-section">
+
+            <h2>Find Us</h2>
+
+            <iframe class="map" src="https://www.google.com/maps?q=Vijayawada,Andhra%20Pradesh&output=embed"
+                loading="lazy">
+            </iframe>
+
+        </div>
+
+
+    </div>
+
+
+    <footer>
+
+        <h3>DK Mart</h3>
+
+        <p>
+            Your trusted online shopping destination
+        </p>
+
+        <p>
+            Email: support@dkmart.com
+        </p>
+
+        <p>
+            Phone: +91 9876543210
+        </p>
+
+        <p>
+            © 2026 DK Mart. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

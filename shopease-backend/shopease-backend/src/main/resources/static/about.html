@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us - DK Mart</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+
+        nav {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 30px;
+            box-shadow: 0 2px 8px gray;
+        }
+
+        .logo {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+        }
+
+        nav ol {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav ol li a {
+            text-decoration: none;
+            color: black;
+            font-size: 17px;
+        }
+
+        nav ol li a:hover {
+            color: orange;
+        }
+
+        .about-banner {
+            background: linear-gradient(rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)),
+                url("https://thumbs.dreamstime.com/z/e-commerce-ecommerce-web-banner-orange-background-various-shopping-icons-online-shopping-concept-e-commerce-ecommerce-web-246439258.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            height: 300px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            color: white;
+        }
+
+        .about-banner h1 {
+            font-size: 45px;
+        }
+
+        .about-banner p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        /* About Content */
+
+        .about-container {
+            width: 85%;
+            margin: 40px auto;
+        }
+
+        .about-section {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #ddd;
+        }
+
+        .about-section h2 {
+            color: orange;
+            margin-bottom: 15px;
+        }
+
+        .about-section p {
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .feature-card {
+            background-color: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #ddd;
+        }
+
+        .feature-card h3 {
+            margin: 15px 0 10px;
+            color: orange;
+        }
+
+        .feature-card p {
+            line-height: 1.5;
+            color: #666;
+        }
+
+        .icon {
+            font-size: 40px;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .category {
+            background-color: #fff3e0;
+            padding: 15px 25px;
+            border-radius: 25px;
+            color: #e65100;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 8px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <img class="logo"
+            src="https://content.jdmagicbox.com/comp/vijayawada/p6/0866px866.x866.191206192017.h4p6/catalogue/dk-mart-ashok-nagar-vijayawada-supermarkets-3757xusrmy.jpg"
+            alt="DK Mart Logo">
+
+        <ol>
+
+            <li>
+                <a href="Home.html">Home</a>
+            </li>
+
+            <li>
+                <a href="products.html">Products</a>
+            </li>
+
+            <li>
+                <a href="cart.html">Cart</a>
+            </li>
+
+            <li>
+                <a href="About.html">About</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
+            <li>
+                <a href="login.html">Login</a>
+            </li>
+
+            <li>
+                <a href="registration.html">Register</a>
+            </li>
+
+        </ol>
+
+    </nav>
+
+    <section class="about-banner">
+
+        <div>
+
+            <h1>About DK Mart</h1>
+
+            <p>
+                Your trusted destination for online shopping
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <div class="about-container">
+
+        <section class="about-section">
+
+            <h2>Who We Are</h2>
+
+            <p>
+                Welcome to DK Mart, an online e-commerce platform
+                designed to make shopping simple, convenient and
+                enjoyable. We provide a wide range of products
+                including electronics, fashion, accessories and
+                everyday essentials.
+            </p>
+
+            <br>
+
+            <p>
+                Our website allows customers to browse products,
+                view product details, add products to their cart
+                and place orders easily from anywhere.
+            </p>
+
+        </section>
+
+
+        <section class="about-section">
+
+            <h2>Our Mission</h2>
+
+            <p>
+                Our mission is to provide customers with a simple,
+                secure and user-friendly online shopping experience.
+                We aim to offer quality products at reasonable prices
+                while providing convenient services to our customers.
+            </p>
+
+        </section>
+
+        <section class="about-section">
+
+            <h2>Why Choose Us?</h2>
+
+            <div class="features">
+
+
+                <div class="feature-card">
+
+                    <div class="icon">🛍️</div>
+
+                    <h3>Wide Range of Products</h3>
+
+                    <p>
+                        Browse different categories and find
+                        products suitable for your needs.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="icon">💰</div>
+
+                    <h3>Affordable Prices</h3>
+
+                    <p>
+                        We provide products at competitive and
+                        affordable prices.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="icon">🚚</div>
+
+                    <h3>Easy Shopping</h3>
+
+                    <p>
+                        Easily browse products, add them to your
+                        cart and proceed with your order.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <section class="about-section">
+
+            <h2>Our Categories</h2>
+
+            <div class="categories">
+
+                <div class="category">
+                    📱 Smartphones
+                </div>
+
+                <div class="category">
+                    💻 Laptops
+                </div>
+
+                <div class="category">
+                    🎧 Headphones
+                </div>
+
+                <div class="category">
+                    ⌚ Smart Watches
+                </div>
+
+                <div class="category">
+                    👟 Shoes
+                </div>
+
+                <div class="category">
+                    🎵 Earbuds
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="about-section">
+
+            <h2>Our Customer Experience</h2>
+
+            <p>
+                We focus on making online shopping easy for everyone.
+                Customers can explore products, compare prices,
+                manage their shopping cart and proceed to checkout
+                through a simple and user-friendly interface.
+            </p>
+
+        </section>
+
+
+    </div>
+
+    <footer>
+
+        <h3>DK Mart</h3>
+
+        <p>
+            Your trusted online shopping destination
+        </p>
+
+        <p>
+            Email: support@dkmart.com
+        </p>
+
+        <p>
+            Phone: +91 9876543210
+        </p>
+
+        <p>
+            © 2026 DK Mart. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

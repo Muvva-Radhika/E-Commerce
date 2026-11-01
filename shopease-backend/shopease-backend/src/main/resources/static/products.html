@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            Justify-content: space-between;
+            padding: 10px 30px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+        }
+
+        ol {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            z-index: -1;
+        }
+
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 30px;
+        }
+
+
+        .product-card img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .product-card h2 {
+            margin: 15px 0 10px;
+        }
+
+        .description {
+            color: gray;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            color: orange;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .buy {
+            background-color: green;
+            color: white;
+        }
+
+        .cart {
+            background-color: orange;
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="products">
+
+        <div class="product-card">
+
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/050/177/034/small/smart-watch-isolated-on-transparent-background-png.png"
+                alt="Product">
+
+            <h2>Smart Watch</h2>
+
+            <p class="description">
+                Smart watch with fitness tracking and heart-rate monitoring.
+            </p>
+
+            <p class="rating">
+                ⭐⭐⭐⭐⭐ 4.5
+            </p>
+
+            <p class="price">
+                ₹2,499
+            </p>
+
+            <button class="buy">Buy Now</button>
+
+            <button class="cart">Add to Cart</button>
+
+        </div>
+        <div class="product-card">
+
+            <img src="https://media.istockphoto.com/id/1372906882/photo/modern-blue-wireless-headphones-isolated-on-white-background-with-clipping-path.jpg?s=612x612&w=0&k=20&c=0k-2JFElEQ0QTvXsgtLx3i2JotQo_Eb8aEwyN-BOZjA="
+                alt="Product">
+
+            <h2>Headphones</h2>
+
+            <p class="description">
+                Wireless headphones with clear sound and comfortable design.
+            </p>
+
+            <p class="rating">
+                ⭐⭐⭐⭐☆ 4.2
+            </p>
+
+            <p class="price">
+                ₹1,499
+            </p>
+
+            <button class="buy">Buy Now</button>
+
+            <button class="cart">Add to Cart</button>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <img src="https://www.campusshoes.com/cdn/shop/files/FORCE_22G-13474_BLACK-OILGRN_01.webp?v=1778060048"
+                alt="Product">
+
+            <h2>Running Shoes</h2>
+
+            <p class="description">
+                Comfortable running shoes suitable for daily exercise.
+            </p>
+
+            <p class="rating">
+                ⭐⭐⭐⭐⭐ 4.7
+            </p>
+
+            <p class="price">
+                ₹1,999
+            </p>
+
+            <button class="buy">Buy Now</button>
+
+            <button class="cart">Add to Cart</button>
+
+        </div>
+        <div class="product-card">
+
+            <img src="https://i5.walmartimages.com/seo/HP-Laptop-15-dw0054wm-Intel-Core-i5-8265U-3-9-GHz-Win-10-Home-64-bit-UHD-Graphics-620-8-GB-RAM-256-GB-SSD-NVMe-15-6-IPS-1366-x-768-HD-Ethernet-Fast-E_18946f0d-08c6-4cee-95a9-0d9e6673551d_2.25fb509f76f829f3165a24f0a3966fec.jpeg"
+                alt="Laptop">
+
+            <h2>HP Laptop</h2>
+
+            <p class="description">
+                HP laptop with powerful processor, 8GB RAM and 512GB SSD.
+            </p>
+
+            <p class="rating">
+                ⭐⭐⭐⭐⭐ 4.6
+            </p>
+
+            <p class="price">
+                ₹55,999
+            </p>
+
+            <button class="buy">Buy Now</button>
+            <button class="cart">Add to Cart</button>
+
+        </div>
+
+        <div class="product-card">
+
+            <img src="https://m.media-amazon.com/images/I/61ye1KFCwFL._AC_SY741_.jpg" alt="Smartphone">
+
+            <h2>Samsung Smartphone</h2>
+
+            <p class="description">
+                Samsung smartphone with excellent camera, 8GB RAM and long-lasting battery.
+            </p>
+
+            <p class="rating">
+                ⭐⭐⭐⭐⭐ 4.5
+            </p>
+
+            <p class="price">
+                ₹24,999
+            </p>
+
+            <button class="buy">Buy Now</button>
+            <button class="cart">Add to Cart</button>
+
+        </div>
+
+        <div class="product-card">
+
+            <img src="https://m.media-amazon.com/images/I/61lpHmOrpAL._AC_UF1000,1000_QL80_.jpg" alt="Wireless Earbuds">
+
+            <h2>Wireless Earbuds</h2>
+
+            <p class="description">
+                Wireless earbuds with clear sound, noise cancellation and long battery life.
+            </p>
+
+            <p class="rating">
+                ⭐⭐⭐⭐☆ 4.3
+            </p>
+
+            <p class="price">
+                ₹2,499
+            </p>
+
+            <script src="/js/common.js"></script>
+            <script src="/js/products.js"></script>
+        </div>
+</body>
